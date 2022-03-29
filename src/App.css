@@ -1,0 +1,201 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+.App {
+  text-align: center;
+  /* height: 100vh; */
+  /* font-family: ; */
+  scroll-behavior: smooth;
+  /* overflow-y: scroll; */
+  /* overscroll-behavior-y: contain; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  /* scroll-padding-inline: var(1em, 1rem); */
+}
+
+.section {
+  padding-top: 100px;
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.landing {
+  background-color: #e0ac00;
+  /* height: 100vh; */
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.landing h1 {
+  color: black;
+}
+
+.infoSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.infoSection h1{
+  font-weight: 100;
+}
+.canvas {
+  transform: translateY(-200px);
+  height: calc(100vh + 100px);
+  width: 60%;
+  position: relative;
+  /* right: 0; */
+
+}
+.logo {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+}
+.logo h1{
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+}
+.info{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  text-align: left;
+  align-items: flex-end;
+  /* top: 30%; */
+  /* left: 30%; */
+}
+
+.info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  padding-left: 100px;
+}
+.info div h1{
+  margin: 0;
+  font-weight: 900;
+  font-size: 6em;
+  text-transform: uppercase;
+  line-break: strict;
+  line-height: 80px;
+}
+
+h1 span{
+  /* font-family: 'Roboto'; */
+  /* font-style: condensed; */
+  font-weight: 400;
+}
+
+.info p{
+  font-weight: light;
+  width: 400px;
+}
+
+.info button{
+  width: fit-content;
+  font-size: 1.5em;
+  /* : 5px; */
+  padding: .5em;
+  border: none;
+  outline: none;
+  background-color: black;
+  border: 3px solid black;
+  
+  transition: .2s all ease-in-out;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.info button:hover{
+  color: black;
+  background-color: #e0ac00;
+}
+
+.info > * {
+  margin: 0;
+}
+
+.productdetails {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.menu {
+  position: fixed;
+  left: 10px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: black;
+}
+
+.menu a{
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu a:hover{
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero{
+    height: 80vh;
+  }
+  .info div {
+    gap: 10px;
+  }
+  .info div div h1 {
+    font-size: 2.5em;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center; */
+  }
+  h1 span {
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transform: translateY(30px);
+    align-items: center;
+  }
+  .canvas {
+    width: 100vw;
+    transform: none;
+  }
+  .info {
+    width: 100%;
+    height: fit-content;
+    /* background-color: aliceblue; */
+    padding: 5px;
+  }
+  .landing {
+    flex-direction: column-reverse;
+  }
+  .topicsContainer {
+    flex-wrap: wrap;
+  }
+}
